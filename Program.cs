@@ -11,20 +11,25 @@ namespace ex030
             int opcao;
 
             Console.Clear();
-            Console.Write("Digite a opção desejada logo abaixo.\n1 - Lista de compras;\nDigite o número desejado: ");
+            Console.Write("Digite a opção desejada logo abaixo.\n1 - Lista de compras;\n2 - Sair do sistema;\nDigite o número desejado: ");
             opcao = Convert.ToInt16(Console.ReadLine());
+
+            while (opcao <= 0 || opcao >= 3)
+            {
+                Console.Clear();
+                Console.WriteLine("\n\nOpção inválida\n\n");
+                Console.Write("Digite a opção desejada logo abaixo.\n1 - Lista de compras;\n2 - Sair do sistema;\nDigite o número desejado: ");
+                opcao = Convert.ToInt16(Console.ReadLine());
+            }
 
             switch (opcao)
             {
                 case 1:
+                    Console.Clear();
                     Lista();
                     break;
                 case 2:
                     Sair();
-                    break;
-                default:
-                    Console.Clear();
-                    Console.WriteLine("\n\n\nOpção inválida!\n\n");
                     break;
             }
         }
@@ -48,7 +53,7 @@ namespace ex030
 
             Console.Clear();
             Console.Write("Gerando sua lista de compras");
-            for (int s = 10; s > 0; s--)
+            for (int s = 3; s > 0; s--)
             {
                 Console.Write(".");
                 Thread.Sleep(1000);

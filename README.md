@@ -1,0 +1,3 @@
+## 🛒 Descrição do Aplicativo
+
+Este aplicativo em C# permite criar uma **lista de compras** diretamente pelo console. O usuário escolhe entre gerar uma lista personalizada ou sair do sistema. Ao selecionar a opção de lista, o programa solicita a quantidade de itens, registra cada um deles e exibe o resultado final de forma organizada. Também inclui uma opção de **saída com animação**, tornando a experiência mais interativa.
